@@ -1,0 +1,9 @@
+sample1_mappedreads.bam	Population1
+sample2_mappedreads.bam	Population1
+sample3_mappedreads.bam	Population1
+sample4_mappedreads.bam	Population2
+sample5_mappedreads.bam	Population2
+sample6_mappedreads.bam	Population2
+sample7_mappedreads.bam	Population3
+sample8_mappedreads.bam	Population3
+sample9_mappedreads.bam	Population3
