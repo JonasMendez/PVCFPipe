@@ -102,6 +102,7 @@ for pop, ids in population_dict.items():
 for popfiles in os.listdir(args.workingdir):
     if popfiles.endswith('_poplist.txt'):
         subprocess.call(["vcftools --vcf %s --keep %s --site-pi --out %s" % (args.variants, popfiles, popfiles[:-12])], shell=True)
+        subprocess.call(["vcftools --vcf %s --keep %s --TajimaD %s --out %s" % (args.variants, popfiles, args.tajimawind, popfiles[:-12])], shell=True)
     else:
         continue
 
@@ -127,7 +128,6 @@ for popfiles in os.listdir(args.workingdir):
     if popfiles.endswith('_poplist.txt'):
         subprocess.call(["vcftools --vcf %s --keep %s --het --out %s" % (filtvcf, popfiles, popfiles[:-12])], shell=True)
         subprocess.call(["vcftools --vcf %s --keep %s --hardy --out %s" % (filtvcf, popfiles, popfiles[:-12])], shell=True)
-        subprocess.call(["vcftools --vcf %s --keep %s --TajimaD %s --out %s" % (filtvcf, popfiles, args.tajimawind, popfiles[:-12])], shell=True)
     else:
         continue
 
